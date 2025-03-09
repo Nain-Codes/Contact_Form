@@ -1,0 +1,120 @@
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f8; /* Lighter, more neutral background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0; /* Adequate padding for visibility */
+}
+
+.form-container {
+    width: calc(100% - 20px);
+    max-width: 800px; /* Increased width for better form visibility */
+    padding: 2rem;
+    background: #ffffff; /* Classic white background for professionalism */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    border-radius: 8px;
+    overflow-y: auto; /* Ensures the form is scrollable if it exceeds the viewport height */
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #333; /* Conservative dark color for titles */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555; /* Slightly softer than black for readability */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px; /* More padding for a better user experience */
+    border: 1px solid #ccc; /* Soft border color */
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+textarea {
+    height: 150px; /* Increased height for more writing space */
+    resize: none; /* Disable resizing */
+}
+
+button {
+    padding: 15px; /* More padding for a more clickable area */
+    background-color: #007bff; /* Professional blue for primary actions */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b9; /* A darker shade for hover state */
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff; /* Focus color to match the button */
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive design adjustments */
+@media only screen and (max-width: 480px) {
+    .form-container {
+        padding: 20px; /* Smaller padding on mobile */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+        font-size: 16px; /* Ensures accessibility and readability */
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .form-container {
+        padding: 25px; /* Medium padding for tablets */
+    }
+}
+
+@media (min-width: 769px) {
+    .form-container {
+        padding: 30px; /* More padding for larger screens */
+    }
+}
